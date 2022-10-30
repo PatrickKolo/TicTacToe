@@ -1,6 +1,11 @@
 body{
     margin: 0;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 header{
@@ -12,11 +17,64 @@ h1{
     font-size: 50px;
 }
 
+.playerContainer{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 15px;
+padding-top: 30px;
+
+}
+
+.playerImg{
+    height: 60px;
+}
+
+.playerContainer div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+
+
+.playerInactive{
+    opacity: 0.3;
+}
+
+.horizontal-line{
+    height: 7px;
+    width: 380px;
+    border-radius: 5px;
+    background-color: darkgray;
+    position: absolute;
+    transform: scaleX(0.0);
+    transform: scaleY(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
+}
+
+.make-vertical{
+    transform: rotate(90deg) scaleX(0.0);;
+
+}
+
+.make-diagonal{
+    transform: rotate(45deg) scaleX(0.0);
+
+}
+.make-diagonal2{
+    transform: rotate(-45deg) scaleX(0.0);
+
+}
+
 .content{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 table{
@@ -69,4 +127,41 @@ tr td:last-child {
 
 .d-none{
     display: none;
+}
+
+.chessPic{
+    position: absolute;
+    left: 750px;
+    top: 250px;
+    height: 440px;
+    width: 440px;
+    border-radius: 5px;
+    object-fit: cover;
+    z-index: 2;
+    animation: zoomIn 800ms ease-in-out;
+}
+
+@keyframes zoomIN{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.restartButton{
+    border: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 50px;
+    background-color: lightgrey;
+}
+.restartButton:hover{
+    background-color: darkgray;
+    cursor: pointer;
+
 }

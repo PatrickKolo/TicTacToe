@@ -14,34 +14,68 @@
 </head>
 
 <body>
+    <img class="chessPic d-none" id="chessPic" src="./img/chess.jpg" alt="">
+
 
     <header>
         <h1>Tic Tac Toe</h1>
     </header>
 
+    <div class="playerContainer">
+        <div class="" id="player1">
+            <img class="playerImg" src="./img/circle2.png" alt=""> Player 1
+        </div>
+        <div class="playerInactive" id="player2">
+            <img class="playerImg" src="./img/x-mark2.png" alt=""> Player 2
+        </div>
+    </div>
+
+
 
 
     <div class="content">
 
-<table>
-    <tr>
-        <td onclick="fillShape(0)"> <img id="circle-0" class="shape d-none" src="./img/circle2.png" alt=""> <img id="cross-0" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
-        <td onclick="fillShape(1)"> <img id="circle-1" class="shape d-none" src="./img/circle2.png" alt=""> <img id="cross-1" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
-        <td onclick="fillShape(2)"> <img id="circle-2" class="shape d-none" src="./img/circle2.png" alt=""> <img id="cross-2" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
-    </tr>
-    <tr>
-        <td onclick="fillShape(3)"> <img id="circle-3" class="shape d-none" src="./img/circle2.png" alt=""> <img id="cross-3" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
-        <td onclick="fillShape(4)"> <img id="circle-4" class="shape d-none" src="./img/circle2.png" alt=""> <img id="cross-4" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
-        <td onclick="fillShape(5)"> <img id="circle-5" class="shape d-none" src="./img/circle2.png" alt=""> <img id="cross-5" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
-    </tr>
-    <tr>
-        <td onclick="fillShape(6)"> <img id="circle-6" class="shape d-none" src="./img/circle2.png" alt=""> <img id="cross-6" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
-        <td onclick="fillShape(7)"> <img id="circle-7" class="shape d-none" src="./img/circle2.png" alt=""> <img id="cross-7" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
-        <td onclick="fillShape(8)"> <img id="circle-8" class="shape d-none" src="./img/circle2.png" alt=""> <img id="cross-8" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
-    </tr>
-</table>
+        <div id="line1" class="horizontal-line" style="top: 330px;"></div> 
+        <div id="line2" class="horizontal-line" style=""></div> 
+        <div id="line3" class="horizontal-line" style="top: 645px;"></div>
 
-</div>
+        <div id="line4" class="horizontal-line make-vertical" style="top: 510px; left: 630px;"></div> 
+        <div id="line5" class="horizontal-line make-vertical" style="top: 510px;"></div>  
+        <div id="line6" class="horizontal-line make-vertical" style="top: 510px; right: 630px;"></div> 
+
+        <div id="line7" class="horizontal-line make-diagonal" style="width: 440px;"></div>
+        <div id="line8" class="horizontal-line make-diagonal2" style="width: 440px; top: 510px;"></div>
+
+
+        <table>
+            <tr>
+                <td onclick="fillShape(0)"> <img id="circle-0" class="shape d-none" src="./img/circle2.png" alt=""> <img
+                        id="cross-0" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
+                <td onclick="fillShape(1)"> <img id="circle-1" class="shape d-none" src="./img/circle2.png" alt=""> <img
+                        id="cross-1" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
+                <td onclick="fillShape(2)"> <img id="circle-2" class="shape d-none" src="./img/circle2.png" alt=""> <img
+                        id="cross-2" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
+            </tr>
+            <tr>
+                <td onclick="fillShape(3)"> <img id="circle-3" class="shape d-none" src="./img/circle2.png" alt=""> <img
+                        id="cross-3" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
+                <td onclick="fillShape(4)"> <img id="circle-4" class="shape d-none" src="./img/circle2.png" alt=""> <img
+                        id="cross-4" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
+                <td onclick="fillShape(5)"> <img id="circle-5" class="shape d-none" src="./img/circle2.png" alt=""> <img
+                        id="cross-5" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
+            </tr>
+            <tr>
+                <td onclick="fillShape(6)"> <img id="circle-6" class="shape d-none" src="./img/circle2.png" alt=""> <img
+                        id="cross-6" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
+                <td onclick="fillShape(7)"> <img id="circle-7" class="shape d-none" src="./img/circle2.png" alt=""> <img
+                        id="cross-7" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
+                <td onclick="fillShape(8)"> <img id="circle-8" class="shape d-none" src="./img/circle2.png" alt=""> <img
+                        id="cross-8" class="shape d-none" src="./img/x-mark2.png" alt=""> </td>
+            </tr>
+        </table>
+
+    </div>
+    <button onclick="restartGame()" id="restartButton" class="restartButton d-none"><b> Restart </b></button>
 
 </body>
 
